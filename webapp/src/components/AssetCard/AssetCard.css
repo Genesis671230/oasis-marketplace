@@ -1,0 +1,141 @@
+.AssetCard {
+  overflow: hidden;
+}
+
+.AssetCard .header,
+.AssetCard .dcl.mana.inline {
+  font-size: 17px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+.AssetCard .header .title {
+  flex: 1 2 auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.ui.card.AssetCard > .content {
+  flex: none;
+}
+
+.ui.card.AssetCard > .content > .header:not(.ui),
+.ui.cards > .card.AssetCard > .content > .header:not(.ui) {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.AssetCard .dcl.mana.inline {
+  margin: 0px;
+  flex: none;
+}
+
+.ui.cards > .ui.card.AssetCard.link .meta,
+.ui.card.link .meta {
+  margin-bottom: 4px;
+}
+
+.ui.cards > .ui.card.AssetCard.link:hover .meta,
+a.ui.card.link:hover .meta {
+  color: var(--secondary-text);
+}
+
+.AssetCard .tags {
+  margin-top: 12px;
+}
+
+.AssetCard .AssetImage {
+  overflow: hidden;
+}
+
+.AssetCard .AssetImage .ens-subdomain {
+  background-size: 557px;
+  background-position-y: -133px;
+}
+
+.AssetCard .AssetImage .ens-subdomain .monospace {
+  margin-top: 0px;
+}
+
+.AssetCard .sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--text);
+}
+
+.AssetCard .card-meta {
+  margin-right: 10px;
+}
+
+.AssetCard .card-rental-day {
+  color: var(--text);
+  font-size: 17px;
+}
+
+.AssetCard .LandBubble {
+  align-self: flex-end;
+  background-color: #ecebed;
+  border: 1px solid #a09ba8;
+  color: #43404A;
+  font-size: 11px;
+  border-radius: 50px !important;
+  display: flex;
+  font-weight: 700;
+  padding: 4px 11px;
+  position: fixed;
+  right: 11px;
+  text-transform: uppercase;
+  top: 11px;
+  z-index: 2;
+}
+
+@media (max-width: 1199px) {
+  .AssetCard .LandBubble {
+    align-self: center;
+    font-size: x-small;
+    justify-content: center;
+    left: 11px;
+    line-height: 12px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .AssetCard .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .AssetCard .header .title {
+    margin-right: 0;
+  }
+
+  .AssetCard .dcl.mana.inline {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+  }
+
+  .AssetCard .LandBubble {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .AssetCard.ui.card > .content,
+  .ui.cards > .AssetCard.card > .content {
+    display: block;
+  }
+
+  .AssetCard .LandBubble {
+    align-items: flex-start;
+    align-self: flex-end;
+    font-size: small;
+    left: unset;
+    text-align: left;
+  }
+}
